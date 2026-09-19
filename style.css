@@ -55,12 +55,10 @@ body {
 
 
 .hero-image img {
-    width: 220px;
-    height: 220px;
+    width: 260px;
+    height: auto;
 
-    object-fit: cover;
-
-    border-radius: 50%;
+    border-radius: 12px;
 
     border: 1px solid #deded9;
 }
