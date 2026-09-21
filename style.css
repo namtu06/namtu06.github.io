@@ -477,7 +477,7 @@ h2 {
 .collage-lab-1 img,
 .collage-lab-2 img,
 .collage-network img {
-    height: 145px;
+    height: 220px;
 
     object-fit: cover;
 }
@@ -754,7 +754,7 @@ h2 {
     .collage-volcano img,
     .collage-heatmap img,
     .collage-correlation img {
-        height: auto;
+        height: 220px;
     }
 
 
