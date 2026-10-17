@@ -315,7 +315,24 @@
                 <h2>Experience</h2>
             </div>
 
-            <article class="experience-item">
+            <!--
+                ANCHOR TEMPLATE FOR A NEW EXPERIENCE:
+                1. Replace the id with a unique lowercase name using hyphens.
+                2. Use this URL to link directly to the item:
+                   https://namtu06.github.io/#your-experience-id
+
+                <article id="your-experience-id" class="experience-item">
+                    <h3>
+                        Your Experience Title
+                        <button type="button" class="copy-section-link" data-copy-link
+                            aria-label="Copy link to this section"
+                            title="Copy link to this section">🔗</button>
+                    </h3>
+                    Copy the experience content here.
+                </article>
+            -->
+
+            <article id="bioinformatics-research-assistant" class="experience-item">
 
                 <!-- Header -->
 
@@ -325,6 +342,13 @@
 
                         <h3>
                             Bioinformatics Research Assistant
+                            <button
+                                type="button"
+                                class="copy-section-link"
+                                data-copy-link
+                                aria-label="Copy link to Bioinformatics Research Assistant"
+                                title="Copy link to Bioinformatics Research Assistant"
+                            >🔗</button>
                         </h3>
 
                         <div class="experience-company">
@@ -338,10 +362,6 @@
                     </span>
 
                 </div>
-
-
-
-
 
                 <!-- Visuals: 6 FIGURE COLLAGE -->
 
@@ -501,14 +521,31 @@
                 </div>
         <!-- PROJECTS -->
 
-        <section class="section projects-section">
+        <section id="projects" class="section projects-section">
 
             <div class="section-heading">
                 <span>04</span>
                 <h2>Projects</h2>
             </div>
 
-            <article class="project">
+            <!--
+                ANCHOR TEMPLATE FOR A NEW PROJECT:
+                1. Replace the id with a unique lowercase name using hyphens.
+                2. Use this URL to link directly to the project:
+                   https://namtu06.github.io/#your-project-id
+
+                <article id="your-project-id" class="project">
+                    <h3>
+                        Your Project Title
+                        <button type="button" class="copy-section-link" data-copy-link
+                            aria-label="Copy link to this section"
+                            title="Copy link to this section">🔗</button>
+                    </h3>
+                    Copy the project content here.
+                </article>
+            -->
+
+            <article id="ecg-amplifier-signal-acquisition" class="project">
 
                 <!-- Header -->
 
@@ -518,6 +555,13 @@
 
                         <h3>
                             ECG Amplifier & Signal Acquisition
+                            <button
+                                type="button"
+                                class="copy-section-link"
+                                data-copy-link
+                                aria-label="Copy link to ECG Amplifier & Signal Acquisition"
+                                title="Copy link to ECG Amplifier & Signal Acquisition"
+                            >🔗</button>
                         </h3>
 
                         <p class="project-subtitle">
@@ -531,7 +575,6 @@
                     </span>
 
                 </div>
-
 
                 <!-- Main project content -->
 
@@ -639,6 +682,37 @@
         </section>
 
     </main>
+
+    <script>
+        document.querySelectorAll("[data-copy-link]").forEach((button) => {
+            button.addEventListener("click", async () => {
+                const section = button.closest("[id]");
+
+                if (!section) {
+                    button.textContent = "Link unavailable";
+                    return;
+                }
+
+                const sectionUrl = `${window.location.origin}${window.location.pathname}#${section.id}`;
+
+                try {
+                    await navigator.clipboard.writeText(sectionUrl);
+                    button.title = "Link copied!";
+                    button.setAttribute("aria-label", "Link copied!");
+                    button.classList.add("copied");
+                    setTimeout(() => {
+                        button.title = "Copy link to this section";
+                        button.setAttribute("aria-label", "Copy link to this section");
+                        button.classList.remove("copied");
+                    }, 2000);
+                } catch (error) {
+                    console.error("Could not copy section link:", error);
+                    button.title = "Copy failed";
+                    button.setAttribute("aria-label", "Copy failed");
+                }
+            });
+        });
+    </script>
 
 </body>
 
