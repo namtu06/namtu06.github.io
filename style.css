@@ -568,9 +568,16 @@ h2 {
    PROJECTS
 ======================================== */
 
+
 .project {
-    padding: 10px 0 0;
+    padding: 10px 0 35px;
 }
+
+.project + .project {
+    border-top: 1px solid #deded9;
+    padding-top: 35px;
+}
+
 
 
 .project-header {
@@ -708,6 +715,91 @@ h2 {
     border-radius: 8px;
 }
 
+
+
+/* ========================================
+   CLOUD INFRASTRUCTURE PROJECT
+======================================== */
+
+.cloud-project-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.cloud-project-info > p {
+    margin-top: 0;
+    margin-bottom: 22px;
+}
+
+.cloud-project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 0;
+}
+
+.cloud-project-details ul {
+    padding-left: 18px;
+    margin-bottom: 0;
+}
+
+.cloud-project-details li {
+    margin-bottom: 5px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.cloud-project-tools p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.cloud-project-architecture {
+    margin: 0;
+    min-width: 0;
+}
+
+.cloud-project-architecture img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #deded9;
+    border-radius: 8px;
+}
+
+.cloud-project-architecture figcaption {
+    margin-top: 7px;
+    color: #888;
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+.cloud-project-gallery {
+    margin-top: 28px;
+    align-items: start;
+}
+
+.cloud-project-gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+    .cloud-project-main {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .cloud-project-details {
+        gap: 18px;
+    }
+}
 
 /* ========================================
    MOBILE
