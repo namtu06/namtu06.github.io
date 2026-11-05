@@ -801,6 +801,51 @@ h2 {
     }
 }
 
+/* Airline project: text left, stacked images right */
+
+.airline-project-main {
+    display: grid;
+    grid-template-columns: 1.5fr 0.85fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.airline-project-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.airline-project-gallery figure {
+    margin: 0;
+}
+
+.airline-project-gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.airline-project-gallery figcaption {
+    margin-top: 6px;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .airline-project-main {
+        grid-template-columns: 1fr;
+    }
+
+    .airline-project-gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+}
+
 /* ========================================
    MOBILE
 ======================================== */
