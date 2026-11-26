@@ -120,6 +120,20 @@ h1 {
     line-height: 1.7;
 }
 
+.intro-list {
+    max-width: 580px;
+    margin: 0 0 18px;
+    padding-left: 2.5em;
+
+    color: var(--muted);
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+.intro-list li + li {
+    margin-top: 0.35em;
+}
+
 
 /* ========================================
    LINKS
@@ -911,7 +925,8 @@ h2 {
     }
 
 
-    .intro {
+    .intro,
+    .intro-list {
         font-size: 1rem;
     }
 
