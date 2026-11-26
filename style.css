@@ -3,14 +3,15 @@
 ======================================== */
 
 :root {
-    --bg: #202321;
-    --text: #EAE5D9;
-    --accent: #B49A65;
-    --muted: #A5AAA1;
-    --muted-subtle: #788078;
-    --border: #414742;
-    --surface: #292E2A;
-    --surface-hover: #343A35;
+    --bg: #1c1c1d;
+    --text: #e6e6e6;
+    --accent: #2698ba;
+    --hover-text: #ffffff;
+    --muted: #b8b5b5;
+    --muted-subtle: #828282;
+    --border: #424246;
+    --surface: #212529;
+    --surface-hover: #2698ba;
 }
 
 
@@ -152,8 +153,8 @@ h1 {
 
 .links a:hover,
 .project-link:hover {
-    color: var(--muted);
-    border-color: var(--muted);
+    color: var(--hover-text);
+    border-color: var(--accent);
 }
 
 
@@ -338,7 +339,12 @@ h2 {
 ======================================== */
 
 .experience-item {
-    padding: 10px 0 0;
+    padding: 10px 0 35px;
+}
+
+.experience-item + .experience-item {
+    border-top: 1px solid var(--border);
+    padding-top: 35px;
 }
 
 
@@ -351,7 +357,7 @@ h2 {
 
     gap: 30px;
 
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 
@@ -385,7 +391,7 @@ h2 {
 
 .copy-section-link:hover {
     background: var(--surface-hover);
-    color: var(--muted);
+    color: var(--hover-text);
     transform: scale(1.1);
 }
 
@@ -434,6 +440,7 @@ h2 {
 
 
 .experience-description p {
+    margin-top: 0;
     margin-bottom: 18px;
 }
 
