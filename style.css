@@ -6,6 +6,7 @@
     --bg: #1c1c1d;
     --text: #e6e6e6;
     --accent: #2698ba;
+    --link: #66d9ef;
     --hover-text: #ffffff;
     --muted: #b8b5b5;
     --muted-subtle: #828282;
@@ -42,6 +43,10 @@ body {
     color: var(--text);
 
     line-height: 1.6;
+}
+
+a {
+    color: var(--link);
 }
 
 
@@ -149,7 +154,7 @@ h1 {
 
 .links a,
 .project-link {
-    color: var(--text);
+    color: var(--link);
 
     text-decoration: none;
 
